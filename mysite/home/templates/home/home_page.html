@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+<h1>Servicios</h1>
+    {{ page.body|richtext }}
+    {% load wagtailcore_tags %}
+    {{ page.body|richtext }}
+
+{% endblock %}
