@@ -90,17 +90,14 @@ class BlogPageGalleryImage(Orderable):
         FieldPanel("caption"),
     ]
 
+
 class BlogTagIndexPage(Page):
-
     def get_context(self, request):
-
         # Filter by tag
-        tag = request.GET.get('tag')
+        tag = request.GET.get("tag")
         blogpages = BlogPage.objects.filter(tags__name=tag)
 
         # Update template context
         context = super().get_context(request)
-        context['blogpages'] = blogpages
+        context["blogpages"] = blogpages
         return context
-    
-    
